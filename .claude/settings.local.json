@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"c:/Users/lutr5/DEV/DEV_websides/youCanReach-it-main/update_logo.py\")"
+    ]
+  }
+}
