@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+
+    <!-- Pinsel-/Wandstrich-Effekt: stärkere Turbulenz für organische Textur -->
+    <filter id="brush" x="-18%" y="-18%" width="136%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="6"
+        seed="14" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5.5"
+        xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+      <!-- Leichte Unschärfe verstärkt Pinsel-Optik -->
+      <feGaussianBlur in="displaced" stdDeviation="0.35"/>
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&amp;display=swap');
+    </style>
+  </defs>
+
+  <!--
+    Kreis als Bézierpfad (kein <circle>) – leicht unregelmäßig,
+    damit der Filter eine natürlichere Verzerrung erzeugt.
+    Startpunkt oben-rechts (~1-Uhr), wo der Pfeil ansetzt.
+  -->
+  <path
+    d="M 84,18
+       C 100,28 112,46 111,63
+       C 110,82  96,100  78,107
+       C 60,114  39,111  24,100
+       C  9, 89   4, 68   9, 50
+       C 14, 32  28, 17  46, 13
+       C 56,10   72,12   84,18 Z"
+    fill="none"
+    stroke="#3E3530"
+    stroke-width="4.1"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#brush)"/>
+
+  <!--
+    Pfeil: beginnt am ~1-Uhr-Punkt des Kreises (84,18),
+    Schaft geht nach oben-rechts, dann klassische Pfeilspitze.
+    Kein Filter – bleibt klar.
+  -->
+  <g transform="translate(86,15) rotate(20)">
+    <!-- Schaft -->
+    <line x1="0" y1="9" x2="0" y2="1"
+      stroke="#3E3530" stroke-width="1.9" stroke-linecap="round"/>
+    <!-- linke Spitzenlinie -->
+    <line x1="-3.8" y1="5.5" x2="0" y2="0"
+      stroke="#3E3530" stroke-width="1.9" stroke-linecap="round"/>
+    <!-- rechte Spitzenlinie -->
+    <line x1=" 3.8" y1="5.5" x2="0" y2="0"
+      stroke="#3E3530" stroke-width="1.9" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text: you can / reach it – Dancing Script 400 für natürlichen Fluss -->
+  <text
+    x="60" y="55"
+    text-anchor="middle"
+    font-family="'Dancing Script', Georgia, cursive"
+    font-weight="400"
+    font-size="18.5"
+    letter-spacing="0.6"
+    fill="#3A3028">you can</text>
+
+  <text
+    x="60" y="76"
+    text-anchor="middle"
+    font-family="'Dancing Script', Georgia, cursive"
+    font-weight="400"
+    font-size="18.5"
+    letter-spacing="0.6"
+    fill="#3A3028">reach it</text>
+
+</svg>
