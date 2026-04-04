@@ -15,8 +15,11 @@
     <div class="nav-container">
       <a href="index.html" class="nav-brand">
         <img src="logo.svg" class="logo-svg" alt="YouCanReachIt Logo">
-        <span class="nav-brand-text">YouCanReach<em>It</em></span>
+        <span class="nav-brand-text">YouCanReach<em>-it</em></span>
       </a>
+      <button class="burger-btn" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="aboutme.html">Über mich</a>
@@ -48,7 +51,7 @@
       <div class="container">
         <img
           class="feature-image"
-          src="image/nav.jpg"
+          src="images/nav.jpg"
           alt="Kontinuität – der Schlüssel zum Erfolg"
         >
         <div class="article" style="margin-top: var(--space-md);">
@@ -161,24 +164,17 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">
+      <div class="footer-col">
         <a href="index.html" class="footer-brand-link">
-          <img src="logo.svg" style="width:40px;height:40px;flex-shrink:0;object-fit:contain;" alt="YouCanReachIt Logo">
-          <span class="footer-brand-name">YouCanReach<em>It</em></span>
+          <img src="logo.svg" style="width:48px;height:48px;flex-shrink:0;object-fit:contain;" alt="YouCanReachIt Logo">
+          <span class="footer-brand-name">YouCanReach<em>-it</em></span>
         </a>
+      </div>
+      <div class="footer-col">
         <p class="footer-tagline">Dein Weg. Dein Ziel.<br>Du schaffst es.</p>
       </div>
-      <div class="footer-nav-wrap">
-        <p class="footer-nav-title">Navigation</p>
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="aboutme.html">Über mich</a>
-          <a href="plan.html">Der Plan</a>
-          <a href="lowcarb.html">Low Carb</a>
-          <a href="intervall.html">Intervallfasten</a>
-          <a href="sinncardio.html">Sinnfull Cardio</a>
-          <a href="picsside.html">Vorher / Nachher</a>
-        </nav>
+      <div class="footer-col">
+        <a href="impressum.html" class="footer-legal-link">Impressum &amp; Datenschutz</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -186,5 +182,6 @@
     </div>
   </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>

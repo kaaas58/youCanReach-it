@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python \"c:/Users/lutr5/DEV/DEV_websides/youCanReach-it-main/update_logo.py\")"
+      "Bash(python \"c:/Users/lutr5/DEV/DEV_websides/youCanReach-it-main/update_logo.py\")",
+      "Bash(grep -n \"width:40px;height:40px\" c:/Users/lutr5/DEV/DEV_websides/youCanReach-it-main/*.html)"
     ]
   }
 }

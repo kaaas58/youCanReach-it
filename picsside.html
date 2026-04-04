@@ -15,8 +15,11 @@
     <div class="nav-container">
       <a href="index.html" class="nav-brand">
         <img src="logo.svg" class="logo-svg" alt="YouCanReachIt Logo">
-        <span class="nav-brand-text">YouCanReach<em>It</em></span>
+        <span class="nav-brand-text">YouCanReach<em>-it</em></span>
       </a>
+      <button class="burger-btn" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="aboutme.html">Über mich</a>
@@ -43,70 +46,39 @@
       </div>
     </section>
 
-    <!-- ===== MOTIVATIONSTEXT ===== -->
-    <section class="section-sm">
-      <div class="container">
-        <div class="highlight" style="max-width:680px; margin:0 auto;">
-          <strong>Was diese Bilder zeigen</strong>
-          Jedes Bild hier ist das Ergebnis konsequenter Ernährungsumstellung, regelmäßiger
-          Bewegung und Geduld. Es gibt keine Abkürzung – aber es gibt einen klaren Weg.
-          Und du kannst ihn gehen.
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== GALERIE: FRONTANSICHT ===== -->
+<!-- ===== KARUSSELL ===== -->
     <section class="section">
-      <div class="container-wide">
-
-        <h2 style="font-size:1.2rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:var(--space-sm);">
-          Frontansicht
-        </h2>
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="image/front1.jpg" alt="Frontansicht – Vorher">
-            <p class="gallery-label">Vorher</p>
+      <div class="container">
+        <div class="carousel">
+          <button class="carousel-btn carousel-prev" aria-label="Zurück">&#8249;</button>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="images/ready.jpg" alt="Ready">
+              </div>
+              <div class="carousel-slide zoom">
+                <img src="images/fatme.jpg" alt="Fatme">
+              </div>
+              <div class="carousel-slide">
+                <img src="images/trnme.jpg" alt="Trnme">
+              </div>
+              <div class="carousel-slide">
+                <img src="images/way.jpg" alt="Dein Weg">
+                <div class="carousel-overlay">
+                  <h2 class="carousel-overlay-title">Was zeigen diese Bilder</h2>
+                  <p class="carousel-overlay-body">Jedes Nachherbild ist das Ergebnis konsequenter Ernährungsumstellung, regelmäßiger Bewegung und Geduld.<br>Es gibt keine Abkürzung<br>–<br>aber es gibt einen klaren Weg. Und du kannst ihn gehen.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="image/front2.jpg" alt="Frontansicht – Nachher">
-            <p class="gallery-label">Nachher</p>
-          </div>
-        </div>
-
-        <!-- SEITENANSICHT -->
-        <h2 style="font-size:1.2rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin:var(--space-lg) 0 var(--space-sm);">
-          Seitenansicht
-        </h2>
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="image/side1.jpg" alt="Seitenansicht links – Vorher">
-            <p class="gallery-label">Links – Vorher</p>
-          </div>
-          <div class="gallery-item">
-            <img src="image/side2.jpg" alt="Seitenansicht rechts – Vorher">
-            <p class="gallery-label">Rechts – Vorher</p>
-          </div>
-          <div class="gallery-item">
-            <img src="image/side4.jpg" alt="Seitenansicht – Nachher">
-            <p class="gallery-label">Nachher</p>
+          <button class="carousel-btn carousel-next" aria-label="Weiter">&#8250;</button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Bild 1"></button>
+            <button class="carousel-dot" aria-label="Bild 2"></button>
+            <button class="carousel-dot" aria-label="Bild 3"></button>
+            <button class="carousel-dot" aria-label="Bild 4"></button>
           </div>
         </div>
-
-        <!-- MOTIVATIONSBILDER -->
-        <h2 style="font-size:1.2rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin:var(--space-lg) 0 var(--space-sm);">
-          Motivation
-        </h2>
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="image/motiv1.jpg" alt="Motivationsbild 1">
-            <p class="gallery-label">Der Anfang</p>
-          </div>
-          <div class="gallery-item">
-            <img src="image/motiv2.jpg" alt="Motivationsbild 2">
-            <p class="gallery-label">Das Ergebnis</p>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -138,24 +110,17 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">
+      <div class="footer-col">
         <a href="index.html" class="footer-brand-link">
-          <img src="logo.svg" style="width:40px;height:40px;flex-shrink:0;object-fit:contain;" alt="YouCanReachIt Logo">
-          <span class="footer-brand-name">YouCanReach<em>It</em></span>
+          <img src="logo.svg" style="width:48px;height:48px;flex-shrink:0;object-fit:contain;" alt="YouCanReachIt Logo">
+          <span class="footer-brand-name">YouCanReach<em>-it</em></span>
         </a>
+      </div>
+      <div class="footer-col">
         <p class="footer-tagline">Dein Weg. Dein Ziel.<br>Du schaffst es.</p>
       </div>
-      <div class="footer-nav-wrap">
-        <p class="footer-nav-title">Navigation</p>
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="aboutme.html">Über mich</a>
-          <a href="plan.html">Der Plan</a>
-          <a href="lowcarb.html">Low Carb</a>
-          <a href="intervall.html">Intervallfasten</a>
-          <a href="sinncardio.html">Sinnfull Cardio</a>
-          <a href="picsside.html">Vorher / Nachher</a>
-        </nav>
+      <div class="footer-col">
+        <a href="impressum.html" class="footer-legal-link">Impressum &amp; Datenschutz</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -163,5 +128,7 @@
     </div>
   </footer>
 
+  <script src="nav.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>
