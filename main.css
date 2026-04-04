@@ -52,6 +52,36 @@
   --nav-height: 68px;
 }
 
+/* --- Dark Mode --- */
+[data-theme="dark"] {
+  --bg-main:       #181210;
+  --bg-alt:        #201810;
+  --bg-card:       #3A2C20;
+  --bg-dark:       #0F0C09;
+  --bg-dark-deep:  #0A0806;
+
+  --accent:        #C09870;
+  --accent-light:  #D4B48A;
+  --accent-pale:   #4A3828;
+
+  --text-primary:  #F5EDE4;
+  --text-secondary:#D0BCA8;
+  --text-muted:    #9A8878;
+  --text-white:    #FDFBF8;
+
+  --border:        #5A4030;
+  --border-light:  #3E2E20;
+
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md:  0 4px 18px rgba(0, 0, 0, 0.5);
+  --shadow-lg:  0 10px 36px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode card border for extra contrast */
+[data-theme="dark"] .card {
+  border-color: rgba(180, 130, 80, 0.3);
+}
+
 /* --- Base --- */
 html { scroll-behavior: smooth; }
 
@@ -62,6 +92,7 @@ body {
   line-height: 1.72;
   font-size: 16px;
   padding-top: var(--nav-height);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -86,12 +117,16 @@ a { text-decoration: none; }
 .nav-container {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "brand actions nav";
   align-items: center;
-  justify-content: space-between;
   padding: 0 32px;
-  gap: var(--space-sm);
 }
+
+.nav-brand   { grid-area: brand; }
+.nav-actions { grid-area: actions; display: flex; align-items: center; gap: 8px; }
+.nav-links   { grid-area: nav; justify-self: end; }
 
 .nav-brand {
   display: flex;
@@ -102,6 +137,8 @@ a { text-decoration: none; }
 }
 
 .logo-svg { width: 48px; height: 48px; flex-shrink: 0; object-fit: contain; }
+
+[data-theme="dark"] .logo-svg { filter: brightness(2.5); }
 
 .nav-brand-text {
   font-size: 1.113rem;
@@ -941,6 +978,27 @@ a.card:active .btn {
 .burger-btn.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .burger-btn.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--bg-main);
+  cursor: pointer;
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.theme-btn:hover {
+  background: var(--accent-pale);
+  transform: rotate(20deg);
+}
+
 
 /* =============================================
    RESPONSIVE
@@ -970,6 +1028,11 @@ a.card:active .btn {
 @media (max-width: 1024px) {
   .burger-btn { display: flex; }
 
+  .nav-container {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "brand actions .";
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -983,6 +1046,7 @@ a.card:active .btn {
     padding: 8px 16px 14px;
     gap: 2px;
     z-index: 999;
+    justify-self: unset;
   }
 
   .nav-links.nav-open { display: flex; }

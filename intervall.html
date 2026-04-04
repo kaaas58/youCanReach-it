@@ -7,6 +7,7 @@
   <title>YouCanReachIt – Intervallfasten</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="main.css">
+  <script>if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark");</script>
 </head>
 <body>
 
@@ -17,9 +18,12 @@
         <img src="logo.svg" class="logo-svg" alt="YouCanReachIt Logo">
         <span class="nav-brand-text">YouCanReach<em>-it</em></span>
       </a>
-      <button class="burger-btn" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-btn" aria-label="Erscheinungsbild umschalten" title="Dark Mode">🌙</button>
+        <button class="burger-btn" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="aboutme.html">Über mich</a>
