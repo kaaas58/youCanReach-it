@@ -1035,6 +1035,9 @@ a.card:active .btn {
     grid-template-areas: "brand . actions";
   }
 
+  .burger-btn { order: 1; }
+  .theme-btn  { order: 2; }
+
   .nav-links {
     display: none;
     position: absolute;
