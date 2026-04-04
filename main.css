@@ -220,6 +220,7 @@ a { text-decoration: none; }
 .section     { padding: var(--space-xl) 0; }
 .section-alt { background: var(--bg-alt); padding: var(--space-xl) 0; }
 .section-sm  { padding: var(--space-lg) 0; }
+.section + .section { padding-top: 0; }
 
 .text-center  { text-align: center; }
 .text-muted   { color: var(--text-muted); font-size: 0.9rem; }
@@ -816,7 +817,7 @@ a.card:active .btn {
 /* Bilder 2 & 3: stärkerer Blur für Gesichter */
 .carousel-slide:nth-child(2) img,
 .carousel-slide:nth-child(3) img {
-  filter: grayscale(100%) blur(2.4px);
+  filter: grayscale(100%) blur(1.2px);
 }
 
 /* Fatme: zoom in via cover to match trnme's fill */
@@ -966,7 +967,7 @@ a.card:active .btn {
   filter: brightness(4);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .burger-btn { display: flex; }
 
   .nav-links {
