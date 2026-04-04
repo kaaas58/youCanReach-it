@@ -1027,12 +1027,12 @@ a.card:active .btn {
   filter: brightness(4);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1490px) {
   .burger-btn { display: flex; }
 
   .nav-container {
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-areas: "brand actions .";
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "brand . actions";
   }
 
   .nav-links {
