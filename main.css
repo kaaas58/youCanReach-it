@@ -54,32 +54,32 @@
 
 /* --- Dark Mode --- */
 [data-theme="dark"] {
-  --bg-main:       #181210;
-  --bg-alt:        #201810;
-  --bg-card:       #3A2C20;
-  --bg-dark:       #0F0C09;
-  --bg-dark-deep:  #0A0806;
+  --bg-main:       #0E1018;
+  --bg-alt:        #13161F;
+  --bg-card:       #1C2133;
+  --bg-dark:       #090B12;
+  --bg-dark-deep:  #05070D;
 
-  --accent:        #C09870;
-  --accent-light:  #D4B48A;
-  --accent-pale:   #4A3828;
+  --accent:        #7A9EC4;
+  --accent-light:  #9BBBD8;
+  --accent-pale:   #18223A;
 
-  --text-primary:  #F5EDE4;
-  --text-secondary:#D0BCA8;
-  --text-muted:    #9A8878;
-  --text-white:    #FDFBF8;
+  --text-primary:  #E2EAF8;
+  --text-secondary:#A0B2CC;
+  --text-muted:    #60748C;
+  --text-white:    #F0F4FC;
 
-  --border:        #5A4030;
-  --border-light:  #3E2E20;
+  --border:        #273050;
+  --border-light:  #1A2340;
 
-  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.4);
-  --shadow-md:  0 4px 18px rgba(0, 0, 0, 0.5);
-  --shadow-lg:  0 10px 36px rgba(0, 0, 0, 0.6);
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.45);
+  --shadow-md:  0 4px 18px rgba(0, 0, 0, 0.55);
+  --shadow-lg:  0 10px 36px rgba(0, 0, 0, 0.65);
 }
 
-/* Dark mode card border for extra contrast */
+/* Dark mode card border */
 [data-theme="dark"] .card {
-  border-color: rgba(180, 130, 80, 0.3);
+  border-color: rgba(100, 140, 200, 0.2);
 }
 
 /* --- Base --- */

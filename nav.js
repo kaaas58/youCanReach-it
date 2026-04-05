@@ -16,13 +16,25 @@
     requestAnimationFrame(step);
   }
 
-  // ── Navbar logo → scroll to footer ───────────
+  // ── Navbar logo ───────────────────────────────
+  // Subpage → navigate to index.html (top)
+  // Home page → footer/top toggle scroll
   var navBrand   = document.querySelector('.nav-brand');
   var siteFooter = document.querySelector('.footer');
-  if (navBrand && siteFooter) {
+  var isHome     = window.location.pathname === '/' ||
+                   window.location.pathname.endsWith('index.html') ||
+                   window.location.pathname.endsWith('/');
+
+  if (navBrand) {
     navBrand.addEventListener('click', function (e) {
       e.preventDefault();
-      smoothScrollTo(siteFooter.getBoundingClientRect().top + window.pageYOffset, 550);
+      if (!isHome) {
+        window.location.href = 'index.html';
+      } else if (siteFooter) {
+        var footerTop  = siteFooter.getBoundingClientRect().top + window.pageYOffset;
+        var nearFooter = window.pageYOffset + window.innerHeight >= footerTop - 80;
+        smoothScrollTo(nearFooter ? 0 : footerTop, 550);
+      }
     });
   }
 
